@@ -19,7 +19,7 @@ Avoiding ambiguously written code and allow the OR operator to fully serve its p
 
 `Reflect.create(target, value, [DefaultValue])`
 
-Creates a Reflect, which is not an object. This is used for setting an OR value with `Reflect`. 
+Creates a Reflect instance, which is a built-in object. This is used for setting an OR value with `Reflect`. 
 
 ### target
  The target object you want your values to be referenced to. You can also look at this as an argument. 
@@ -57,8 +57,9 @@ var obj = {};
 var safeValue = "Hi! This is the fallback value";
 var wrapper = obj || safeValue;
 
-if(typeof obj === undefined && typeof safeValue === undefined) {
+if(!isValidObject(wrapper)) {
  wrapper == undefined
+ // Any logging here.
 }
 ```
 
