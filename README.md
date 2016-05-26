@@ -1,5 +1,8 @@
 # proposal-reflect-or
+
 [WIP]Unofficial ECMAScript proposal
+
+A mock-up of an proposal, of which will be used as a template for a improved version.
 
 #Reason
 
@@ -11,7 +14,7 @@ Avoiding ambiguously written code and allow the OR operator to fully serve its p
 
 ### How is this different to Default Param in ES6 / the OR operator?
 
- I'll try to go through most of what I was thinking and why I think they are relevant. Feel free to drop a PR or Issue if you have some feedback. I have two options in mind for this proposal.
+ I'll try to go through most of what I was thinking and why I think they are relevant. Feel free to drop a PR or Issue if you have some feedback. The main cause of this proposal is to remove code with logical operators, which uses the existing variable, to reassign it with an logical operator as a fallback value.
  
 ***
 
