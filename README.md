@@ -11,15 +11,54 @@ Avoiding ambiguously written code and allow the OR operator to fully serve its p
 
 ### How is this different to Default Param in ES6 / the OR operator?
 
-There's some breaking changes. One of which, we can steal the from proxies. I'll try to go through most of them and why I think they are relevant. Feel free to drop a PR or Issue if you have some feedback.
+ I'll try to go through most of what I was thinking and why I think they are relevant. Feel free to drop a PR or Issue if you have some feedback. I have two options in mind for this proposal.
+ 
 ***
-## `Reflect.apply()`
 
-Giving a shot at trying to keep this somewhat similar to our existing opportunities. Note that we assume our `DefaultVar` and `fallbackVar` has already been set, we define our method like this. This allows us to set an new object that acts like a container while preserving the context of our two values(See next section). It will return undefined if otherwise. A crazy idea, would be to get undefined to be swapped out with a promise in order to make sure we get either one of these values. 
+## `Reflect.create()`
 
-`Reflect.apply(DefaultVar, undefined, fallbackVar); `
+`Reflect.create(target, value, [DefaultValue])`
 
-***
-## `Reflect.construct()` 
+Creates a Reflect, which is not an object. This is used for setting an OR value with `Reflect`. 
 
-Similar to what we had above, alltough, this acts like a `new Something` rather than calling the context it was set in. The difference from this and `Reflect.apply()` is that we can make this as a container object rather than directly invoking. 
+### target
+ The target object you want your values to be referenced to. You can also look at this as an argument. 
+ 
+### value 
+
+The second argument or object you want to refer to, if the target fails. Look at the example below for more information how this is used.
+
+### DefaultValue
+
+A fallsafe if the two fails, of which you can specify what should be returned if the two values fail, undefined, null or similar. This is a function object, which we can turn straight into a function on the fly if we want to. 
+
+
+###Example
+
+```javascript
+// without the optional fallback flag
+var obj = {};
+var safeValue = "Hi! This is the fallback value";
+var wrapper = Reflect.create(obj, safeValue);
+
+// with optional flag
+
+var obj = {};
+var safeValue = "Hi! This is the fallback value";
+var wrapper = Reflect.create(obj, safeValue, undefined);
+```
+
+Now, if these two values fails somehow, we can avoid using tenaries/OR operators as well. If both the values fail, we will return undefined. 
+
+This is equivalent to: 
+
+```javascript
+var obj = {};
+var safeValue = "Hi! This is the fallback value";
+var wrapper = obj || safeValue;
+
+if(typeof obj === undefined && typeof safeValue === undefined) {
+ wrapper == undefined
+}
+```
+
