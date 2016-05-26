@@ -30,7 +30,7 @@ The second argument or object you want to refer to, if the target fails. Look at
 
 ### DefaultValue
 
-A fallsafe if the two fails, of which you can specify what should be returned if the two values fail, undefined, null or similar. This is a function object, which we can turn straight into a function on the fly if we want to. 
+A fallsafe if the two fails, of which you can specify what should be returned if the two values fail, undefined, null or similar. This is an object, which we can turn straight into a function on the fly if we want to. 
 
 
 ###Example
