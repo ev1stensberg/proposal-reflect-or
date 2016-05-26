@@ -60,6 +60,7 @@ var obj = {};
 var safeValue = "Hi! This is the fallback value";
 var wrapper = obj || safeValue;
 
+// isValidObject () is checking if this is an object. With lodash, this would be equivalent to isPlainObject()
 if(!isValidObject(wrapper)) {
  wrapper == undefined
  // Any logging here.
