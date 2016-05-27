@@ -1,0 +1,134 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./spec.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+	<script src="./spec.js"></script>
+	<title>Reflect.logical[AND|OR]</title>
+	<script type="application/json" id="menu-search-biblio">
+		{
+			"clauses": {
+				"sec-Reflect-logicalOR": {
+					"location": "",
+					"id": "sec-Reflect-logicalOR",
+					"aoid": "logicalOR",
+					"title": "Reflect.logicalOR ( _object_, _object_, _[value]_ )",
+					"number": "1"
+				},
+				"sec-Reflect-logicalAND": {
+					"location": "",
+					"id": "sec-Reflect-logicalAND",
+					"aoid": "logicalAND",
+					"title": "Reflect.logicalOR ( _object_, _object_, _[value]_",
+					"number": "2"
+				},
+				"sec-copyright-and-software-license": {
+					"location": "",
+					"id": "sec-copyright-and-software-license",
+					"aoid": null,
+					"title": "Copyright & Software License",
+					"number": "A"
+				}
+			},
+			"ops": {
+				"logicalOR": {
+					"aoid": "logicalOR",
+					"id": "sec-Reflect-logicalOR",
+					"location": ""
+				},
+				"logicalAND": {
+					"aoid": "logicalAND",
+					"id": "sec-Reflect-logicalAND",
+					"location": ""
+				}
+			},
+			"productions": {},
+			"terms": {},
+			"examples": {},
+			"notes": {},
+			"tables": {},
+			"figures": {}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="menu-toggle">☰</div>
+	<div id="menu">
+		<div id="menu-search"><input type="text" id="menu-search-box" placeholder="Search...">
+			<div id="menu-search-results" class="inactive"></div>
+		</div>
+		<div id="menu-toc">
+			<ol class="toc">
+				<li><span class="item-toggle-none"></span><a href="#sec-Reflect-logicalOR" title="Reflect.logicalOR ( _object_, _object_, _[value]_ )"><span class="secnum">1</span> Reflect.logicalOR ( <var>object</var>, <var>object</var>, <var>[value]</var> )</a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-Reflect-logicalAND" title="Reflect.logicalOR ( _object_, _object_, _[value]_"><span class="secnum">2</span> Reflect.logicalOR ( <var>object</var>, <var>object</var>, <var>[value]</var></a></li>
+				<li><span class="item-toggle-none"></span><a href="#sec-copyright-and-software-license" title="Copyright &amp; Software License"><span class="secnum">A</span> Copyright &amp; Software License</a></li>
+			</ol>
+		</div>
+	</div>
+	<h1 class="version">Stage 0 Draft / May 27, 2016</h1>
+	<h1 class="title">Reflect.logical[AND|OR]</h1>
+
+	<emu-clause id="sec-Reflect-logicalOR" aoid="logicalOR">
+		<h1><span class="secnum">1</span>Reflect.logicalOR ( <var>object</var>, <var>object</var>, <var>[value]</var> )<span class="utils"><span class="anchor"><a href="#sec-Reflect-logicalOR">#</a></span></span></h1>
+		<p>When the <code>logicalOR</code> method is called with arguments, the following steps are taken:</p>
+		<emu-alg>
+			<ol>
+				<li>Let Reflect be an **object**.
+					<ol>
+						<li>Let <var>object</var> be an **object**.</li>
+						<li>Let <var>object</var> be an **object**.</li>
+						<li>Let <var>[value]</var> be an **primitive** that returns null or undefined based on what the user inputs.</li>
+						<li>Throws an TypeError if <var>object</var> is non-existent.</li>
+					</ol>
+				</li>
+				<li>Assigns <var>[value]</var> as undefined if parameter isn't supplied.
+					<ol>
+						<li>Calculations happens through normal OR logic rules.</li>
+						<li>Return a the new value upon the "Reflected" object, of which, the user assigns.
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+
+	<emu-clause id="sec-Reflect-logicalAND" aoid="logicalAND">
+		<h1><span class="secnum">2</span>Reflect.logicalOR ( <var>object</var>, <var>object</var>, <var>[value]</var><span class="utils"><span class="anchor"><a href="#sec-Reflect-logicalAND">#</a></span></span></h1>
+		<p>When the <code>logicalAND</code> method is called with arguments, the following steps are taken:</p>
+		<emu-alg>
+			<ol>
+				<li>Let Reflect be an **object**.</li>
+				<li>Let <var>object</var> be an **object**.</li>
+				<li>Let <var>object</var> be an **object**.</li>
+				<li>Let <var>[value]</var> be an **primitive** that returns null or undefined based on what the user inputs.</li>
+				<li>Throws an TypeError if <var>object</var> is non-existent.</li>
+				<li>Assigns <var>[value]</var> as undefined if parameter isn't supplied.</li>
+				<li>Calculations happens through normal AND logic rules.</li>
+				<li>Return a the new value upon the "Reflected" object, of which, the user assigns.
+				</li>
+			</ol>
+		</emu-alg>
+	</emu-clause>
+	<emu-annex id="sec-copyright-and-software-license">
+		<h1><span class="secnum">A</span>Copyright &amp; Software License<span class="utils"><span class="anchor"><a href="#sec-copyright-and-software-license">#</a></span></span></h1>
+
+		<h2>Copyright Notice</h2>
+		<p>© 2016 Even Stensberg</p>
+
+		<h2>Software License</h2>
+		<p>All Software contained in this document ("Software") is protected by copyright and is being made available under the "BSD License", included below. This Software may be subject to third party rights (rights from parties other than Ecma International), including patent rights, and no licenses under such third party rights are granted under this license even if the third party concerned is a member of Ecma International. SEE THE ECMA CODE OF CONDUCT IN PATENT MATTERS AVAILABLE AT http://www.ecma-international.org/memento/codeofconduct.htm FOR INFORMATION REGARDING THE LICENSING OF PATENT CLAIMS THAT ARE REQUIRED TO IMPLEMENT ECMA INTERNATIONAL STANDARDS.</p>
+
+		<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
+
+		<ol>
+			<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+			<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+			<li>Neither the name of the authors nor Ecma International may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+		</ol>
+
+		<p>THIS SOFTWARE IS PROVIDED BY THE ECMA INTERNATIONAL "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ECMA INTERNATIONAL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+	</emu-annex>
+</body>

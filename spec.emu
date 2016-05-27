@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset="utf8">
+<link rel="stylesheet" href="./spec.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<script src="./spec.js"></script>
+<pre class="metadata">
+title: Reflect.logical[AND|OR]
+stage: 0
+contributors: Even Stensberg
+</pre>
+
+<emu-clause id="sec-Reflect-logicalOR" aoid="logicalOR">
+	<h1>Reflect.logicalOR ( _object_, _object_, _[value]_ )</h1>
+	<p>When the `logicalOR` method is called with arguments, the following steps are taken:</p>
+	<emu-alg>
+		1. Let Reflect be an **object**.
+	  1. Let _object_ be an **object**.
+	  1. Let _object_ be an **object**.
+	  1. Let _[value]_ be an **primitive** that returns null or undefined based on what the user inputs.
+	  1. Throws an TypeError if _object_ is non-existent.
+		1. Assigns _[value]_ as undefined if parameter isn't supplied.
+	  1. Calculations happens through normal OR logic rules.
+	  1. Return a the new value upon the "Reflected" object, of which, the user assigns.
+	</emu-alg>
+</emu-clause>
+
+<emu-clause id="sec-Reflect-logicalAND" aoid="logicalAND">
+	<h1>Reflect.logicalOR ( _object_, _object_, _[value]_</h1>
+	<p>When the `logicalAND` method is called with arguments, the following steps are taken:</p>
+	<emu-alg>
+		1. Let Reflect be an **object**.
+		1. Let _object_ be an **object**.
+		1. Let _object_ be an **object**.
+		1. Let _[value]_ be an **primitive** that returns null or undefined based on what the user inputs.
+		1. Throws an TypeError if _object_ is non-existent.
+		1. Assigns _[value]_ as undefined if parameter isn't supplied.
+		1. Calculations happens through normal AND logic rules.
+		1. Return a the new value upon the "Reflected" object, of which, the user assigns.
+	</emu-alg>
+</emu-clause>
