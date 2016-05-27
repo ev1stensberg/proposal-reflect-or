@@ -14,7 +14,7 @@ This proposal is currently under no stage and is considered as a proposal, which
  - We allow logical operators to live in a cleaner ecosystem without polluting the use case, making method call static, in order to preserve its uniqueness and clear intent.
  - This makes code more readable for everyone and gives us a nice addition to existing reflection methods such as `Reflect.defineProperty()`. It also encourages interceptable JavaScript operations which again, `var foo = foo || bar` had as an intent in the first place in one way.
 
- Note: I haven't targeted `ReflectAND()`, the scenarios would be different but the goal is the same as stated above. 
+ Note: I haven't targeted `ReflectAND()`, the scenarios would be different but the goal is the same as stated above.
 
 ## Naming
 The reasons to stick with `logcialOR` and `logicalAND` are straightforward: it provides a relevance to both `Reflect` and the logical operators, that has a clear distinction.
@@ -23,6 +23,10 @@ I considered `Reflect.create`, but it got downvoted in ESDiscuss for bad naming 
 
 ## Spec
 You can view the spec in [markdown format](spec.md) or rendered as [HTML](http://ev1stensberg.github.io/proposal-reflect-or/).
+
+## License
+
+In the website, you see that this is owned by ECMA. I haven't signed a CLA yet, and if this go to stage-0 I will have to. For now, I give ECMA/TC39 all rights to this material and grant them full access on request.
 
 ## A little thanks
 
