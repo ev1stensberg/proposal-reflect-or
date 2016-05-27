@@ -25,7 +25,7 @@ contributors: Even Stensberg
 </emu-clause>
 
 <emu-clause id="sec-Reflect-logicalAND" aoid="logicalAND">
-	<h1>Reflect.logicalOR ( _object_, _object_, _[value]_</h1>
+	<h1>Reflect.logicalAND ( _object_, _object_, _[value]_ )</h1>
 	<p>When the `logicalAND` method is called with arguments, the following steps are taken:</p>
 	<emu-alg>
 		1. Let Reflect be an **object**.
