@@ -5,7 +5,7 @@
 <script src="./spec.js"></script>
 <pre class="metadata">
 title: Reflect.logical[AND|OR]
-stage: 0
+stage: N/A
 contributors: Even Stensberg
 </pre>
 
